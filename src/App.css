@@ -1,0 +1,23 @@
+:root {
+  --mainDark: #aabfd4;
+  --mainGrey: rgb(117, 152, 216);
+  --mainLightGrey: rgb(73, 3, 3);
+  --mainWhite: #fff;
+  --mainBlue: #007bff;
+}
+
+img {
+  padding: 15px;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+
+
+

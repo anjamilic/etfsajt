@@ -1,20 +1,26 @@
-import React, { Component } from 'react';
+
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
-import emailjs from 'emailjs-com';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-class Contact extends Component{
-    render(){
-        function sendEmail(e) {
-            e.preventDefault();
-            emailjs.sendForm('service_6paogvc', 'template_l1h7osi', e.target, null)
-              .then((result) => {
-                  console.log(result.text);
-              }, (error) => {
-                  console.log(error.text);
-              });
-              e.target.reset();
-        }
+export const ContactUs = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_wqyxgrt','template_j9b0c1i', form.current, 'rAoQQW6hvoVZW-Nan')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      e.target.reset();
+  };
+
+ 
         return(
             <section className="my-5 py-5">
                 <div className="container">
@@ -36,7 +42,7 @@ class Contact extends Component{
                    
                     <div className="col-md-5">
                         <h4><strong>Kontaktirajte nas</strong></h4>
-                        <form onSubmit={sendEmail}>
+                        <form form ref={form} onSubmit={sendEmail}>
                             <div className="form-group">
                                 <input type="text" className="form-control" placeholder="Ime" name="name"/>
                             </div><br></br>
@@ -58,6 +64,6 @@ class Contact extends Component{
             </section>
         );
         }
-}
 
-export default Contact;
+
+

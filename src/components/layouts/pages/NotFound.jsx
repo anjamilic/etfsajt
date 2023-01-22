@@ -6,7 +6,7 @@ import styled from 'styled-components'
 function NotFound(){
     const [txt, setTxt] = useState('');
         return(
-            <ComponentNotFound >
+            <ComponentNotFound className = "container margin-top">
                 <div className="row">
                     <div className="col-md-12">
                         <div className="error-template">
@@ -15,6 +15,7 @@ function NotFound(){
                             <div className="error-details">
                                 Kliknite na dugme ispod za vise detalja!
                             </div>
+                            
                             <div>
                                 <p>{txt}</p>
                                 <button onClick={() => setTxt(txt + '*Stranica putem koje želite da pristupite web sajtu nije pronađena na serveru. Molimo Vas vratite se na pocetnu stranu sajta.')}>Više detalja</button>
@@ -49,6 +50,9 @@ const ComponentNotFound = styled.div`
     .btn {
         margin-right: 10px;
     }
-
+    
+    .row{
+        margin-bottom: 80px;
+    }
 `;
 

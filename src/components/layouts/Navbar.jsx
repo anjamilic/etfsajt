@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar(){
     return(
-    <nav className="navbar navbar-expand-lg"  style={{backgroundColor:" rgb(73, 3, 3)",color:"white"}} >
+    <nav className="navbar navbar-expand-lg "  style={{backgroundColor:" rgb(73, 3, 3)",color:"white"}} >
     <div className="container-fluid">
     <Link className="navbar-brand ml-5" to="/">
         <img src={logo} alt="logo" style={{width:'90px'}}></img>

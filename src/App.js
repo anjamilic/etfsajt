@@ -5,7 +5,7 @@ import Navbar from './components/layouts/Navbar.jsx';
 import Footer from './components/layouts/Footer.jsx';
 import { Switch, Route } from 'react-router-dom';
 import Home from './components/layouts/pages/Home.jsx';
-import Contact from './components/layouts/pages/Contact.jsx';
+import Contact, { ContactUs } from './components/layouts/pages/Contact.jsx';
 import NotFound from './components/layouts/pages/NotFound.jsx';
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route path="/kontakt" component={Contact}/>
+          <Route path="/kontakt" component={ContactUs}/>
           <Route component={NotFound}/>
         </Switch>
         <Footer />
